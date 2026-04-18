@@ -1,6 +1,7 @@
 import { resolve } from 'path'
 import { defineConfig } from 'electron-vite'
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite' // ← 追加
 
 export default defineConfig({
   main: {
@@ -27,6 +28,6 @@ export default defineConfig({
         '@renderer': resolve('src/renderer/src')
       }
     },
-    plugins: [react({ jsxImportSource: '@emotion/react' })]
+    plugins: [tailwindcss(), react({ jsxImportSource: '@emotion/react' })]
   }
 })

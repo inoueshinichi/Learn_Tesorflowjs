@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* 拡張設定 */
+@theme {
+  /* 新しい色の追加 */
+  --color-brand-primary: #3b82f6;
+  --color-brand-accent: #f43f5e;
+
+  /* 既存の値を上書き・拡張 */
+  --font-sans: "Inter", "Noto Sans JP", sans-serif;
+  
+  /* アニメーションの追加 */
+  --animate-slow-spin: spin 3s linear infinite;
+}
+
+/* 例 */
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-brand-primary text-white rounded-lg hover:opacity-90 transition;
+  }
+}
+
+@layer utilities {
+  /* Electron特有：ウィンドウをドラッグ可能にするユーティリティ */
+  .drag {
+    -webkit-app-region: drag;
+  }
+  .no-drag {
+    -webkit-app-region: no-drag;
+  }
+}

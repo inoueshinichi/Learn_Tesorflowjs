@@ -54,7 +54,14 @@ const electronRouter = createHashRouter([
 ])
 
 function App(): React.JSX.Element {
-  return <RouterProvider router={electronRouter} />
+  // return <RouterProvider router={electronRouter} />
+  return (
+    <div className="min-h-screen bg-slate-900 flex items-center justify-center">
+      <h1 className="text-4xl font-bold text-sky-400 drop-shadow-md">
+        Electron + Tailwind CSS v4!
+      </h1>
+    </div>
+  )
 }
 
 // function App(): React.JSX.Element {

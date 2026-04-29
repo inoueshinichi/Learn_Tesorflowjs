@@ -7,9 +7,10 @@ import { createHashRouter, RouterProvider, useRouteError } from 'react-router-do
 import { Locale } from './utils/locale'
 import Clock from './components/Clock'
 import OutlineLayout from './components/OutlineLayout'
-import Home from './components/Home'
-import Tensorflow from './components/Tensorflow'
-import OpenCV from './components/OpenCV'
+import Home from './Home'
+import Tensorflow from './TensorflowPage'
+import OpenCV from './OpencvPage'
+import Form from "./components/forms/Form"
 
 
 function ErrorPage() {
@@ -30,9 +31,10 @@ const electronRouter = createHashRouter([
   {
     path: '/',
     element: 
-      <OutlineLayout title="Tensorflow.js and OpenCV.js">
-        <Clock locale={Locale.JP} />
-      </OutlineLayout>
+      // <OutlineLayout title="Tensorflow.js and OpenCV.js">
+      //   <Clock locale={Locale.JP} />
+      // </OutlineLayout>
+      <OutlineLayout title="Tensorflow.js and OpenCV.js"></OutlineLayout>
     ,
     errorElement: <ErrorPage />
     ,
@@ -49,24 +51,30 @@ const electronRouter = createHashRouter([
         path: "opencv",
         element: <OpenCV />
       },
+      {
+        path: "myform",
+        element: <Form />
+      },
     ]
   }
 ])
 
+// function App(): React.JSX.Element {
+//   return (
+//     <div className="min-h-screen bg-slate-900 flex items-center justify-center">
+//       <h1 className="text-4xl font-bold text-sky-400 drop-shadow-md">
+//         Electron + Tailwind CSS v4!
+//       </h1>
+//     </div>
+//   )
+// }
+
 function App(): React.JSX.Element {
-  // return <RouterProvider router={electronRouter} />
-  return (
-    <div className="min-h-screen bg-slate-900 flex items-center justify-center">
-      <h1 className="text-4xl font-bold text-sky-400 drop-shadow-md">
-        Electron + Tailwind CSS v4!
-      </h1>
-    </div>
-  )
+  return <RouterProvider router={electronRouter} />
 }
 
 // function App(): React.JSX.Element {
 //   const ipcHandle = (): void => window.electron.ipcRenderer.send('ping')
-
 //   return (
 //     <>
 //       <img alt="logo" className="logo" src={electronLogo} />

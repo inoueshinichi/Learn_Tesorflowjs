@@ -26,21 +26,17 @@ import {
 
 import React, { Suspense, lazy } from 'react'
 
-// emotion-style
-import styled from '@emotion/styled'
-import { css } from '@emotion/react'
 
-
-function Tensorflow(): React.JSX.Element {
+function OpencvPage(): React.JSX.Element {
     return (
         <>
             <div>
                 <header>
-                    <h1>Tensorflow</h1>
+                    <h1>OpenCV</h1>
                 </header>
                 <div>
                     <ul>
-                        <li>tensorflow</li>
+                        <li>opencv</li>
                         <li><Link to="/">ホームに戻る</Link></li>
                     </ul>
                 </div>
@@ -49,4 +45,4 @@ function Tensorflow(): React.JSX.Element {
     )
 }
 
-export default Tensorflow
+export default OpencvPage

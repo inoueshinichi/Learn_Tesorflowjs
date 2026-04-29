@@ -27,7 +27,7 @@ import {
 import React, { Suspense, lazy } from 'react'
 
 
-export function SocketComponent() {
+function WebSocketPage() {
   const [messages, setMessages] = useState<string[]>([]);
   const [socket, setSocket] = useState<WebSocket | null>(null);
 
@@ -58,3 +58,6 @@ export function SocketComponent() {
     </div>
   )
 }
+
+export default WebSocketPage
+

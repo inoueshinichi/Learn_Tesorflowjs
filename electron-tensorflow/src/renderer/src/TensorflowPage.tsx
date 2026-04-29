@@ -26,23 +26,23 @@ import {
 
 import React, { Suspense, lazy } from 'react'
 
-import Versions from "./Versions"
 
-function Home(): React.JSX.Element {
+function TensorflowPage(): React.JSX.Element {
     return (
-        <React.Fragment>
-            <div className="home-">
-                <ul className="home-list">
-                    <li><Link to="/tensorflow">Tensorflow.js</Link></li>
-                    <li><NavLink to="/opencv">OpenCV.js</NavLink></li>
-                </ul>
-            </div>
+        <>
             <div>
-                <Versions></Versions>
+                <header>
+                    <h1>Tensorflow</h1>
+                </header>
+                <div>
+                    <ul>
+                        <li>tensorflow</li>
+                        <li><Link to="/">ホームに戻る</Link></li>
+                    </ul>
+                </div>
             </div>
-        </React.Fragment>
+        </>
     )
 }
 
-
-export default Home
+export default TensorflowPage

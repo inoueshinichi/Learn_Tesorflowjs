@@ -23,14 +23,10 @@ import {
 import React, { ReactNode } from 'react'
 import { Outlet } from "react-router-dom"
 
-// emotion-style
-import styled from '@emotion/styled'
-import { css } from '@emotion/react'
-
 import Clock from './Clock'
 import { Locale } from "@renderer/utils/locale"
 
-
+import Versions from "./Versions"
 
 interface OutlineLayoutProps {
     children?: ReactNode;
@@ -53,6 +49,7 @@ function OutlineLayout(props: OutlineLayoutProps): React.JSX.Element {
             <footer className="outline-footer">
                 <p>© 2026 Powered by TinyTank</p>
             </footer>
+            <Versions></Versions>
         </div>
     )
 }

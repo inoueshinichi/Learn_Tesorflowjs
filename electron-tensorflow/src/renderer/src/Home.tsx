@@ -26,27 +26,21 @@ import {
 
 import React, { Suspense, lazy } from 'react'
 
-// emotion-style
-import styled from '@emotion/styled'
-import { css } from '@emotion/react'
 
 
-function OpenCV(): React.JSX.Element {
+function Home(): React.JSX.Element {
     return (
-        <>
-            <div>
-                <header>
-                    <h1>OpenCV</h1>
-                </header>
-                <div>
-                    <ul>
-                        <li>opencv</li>
-                        <li><Link to="/">ホームに戻る</Link></li>
-                    </ul>
-                </div>
+        <React.Fragment>
+            <div className="home">
+                <ul className="home-list">
+                    <li><Link to="/tensorflow">Tensorflow.js</Link></li>
+                    <li><NavLink to="/opencv">OpenCV.js</NavLink></li>
+                    <li><NavLink to="/myform">My Form</NavLink></li>
+                </ul>
             </div>
-        </>
+        </React.Fragment>
     )
 }
 
-export default OpenCV
+
+export default Home

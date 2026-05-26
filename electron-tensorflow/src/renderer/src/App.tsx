@@ -8,9 +8,10 @@ import { Locale } from './utils/locale'
 import Clock from './components/Clock'
 import OutlineLayout from './components/OutlineLayout'
 import Home from './Home'
-import Tensorflow from './TensorflowPage'
-import OpenCV from './OpencvPage'
+import TensorflowPage from './TensorflowPage'
+import OpenCVPage from './OpencvPage'
 import Form from "./components/forms/Form"
+import FirebasePage from './FirebasePage'
 
 
 function ErrorPage() {
@@ -45,15 +46,19 @@ const electronRouter = createHashRouter([
       },
       {
         path: "tensorflow",
-        element: <Tensorflow />
+        element: <TensorflowPage />
       },
       {
         path: "opencv",
-        element: <OpenCV />
+        element: <OpenCVPage />
       },
       {
         path: "myform",
         element: <Form />
+      },
+      {
+        path: "firebase",
+        element: <FirebasePage />
       },
     ]
   }

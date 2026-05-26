@@ -26,6 +26,7 @@
     "@electron-toolkit/utils": "^4.0.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@firebase-oss/ui-react": "^7.0.2-beta",
     "@prisma/client": "^6.19.3",
     "@tailwindcss/vite": "^4.2.2",
     "@types/dotenv": "^6.1.1",
